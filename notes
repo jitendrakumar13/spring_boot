@@ -1,0 +1,14 @@
+@annotations is if mentioned before any class then it will automatically registered as a spring bean
+bean is basically object which is stored in ioc container
+
+
+@SpringBootApplication this annotation is used to tell spring boot that this is a spring boot application
+and it will do all the configuration automatically, also it is used scan all the beans in the package
+it will scan all files which is inside main
+package com.springboot.firstspring; // this is the package name means whatever inside this package
+all will scaned by springbootapplication
+
+springbootapplication it will do 3 works
+1.configuration
+2.component scan
+3.enable auto configuration
