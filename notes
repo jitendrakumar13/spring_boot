@@ -12,3 +12,18 @@ springbootapplication it will do 3 works
 1.configuration
 2.component scan
 3.enable auto configuration
+
+
+//databse
+-ORM - Object Relational Mapping is a technique to map database tables to java objects and vice versa
+-ORM working as a bridge between java and database
+-Java Persistence API (JPA) is a specification for accessing, persisting, and managing data between Java objects / classes and a relational database
+or JPA is set of rules and regulations which is used to communicate with database
+-Persistent Provider is the implementation of JPA interface which is used to communicate with database
+
+-Spring Data MongoDB is a part of the Spring Data project and provides seamless integration with MongoDB, a popular NoSQL database.
+It simplifies the process of working with MongoDB in Spring-based applications by offering powerful abstractions and utilities for CRUD operations, query creation, and data manipulation.
+
+
+ResponseEntity is a class that represents an HTTP response. It can be used to build the response entity with the status code, headers, and body.
+working: ResponseEntity is used to return response to the client. It can be used to control the HTTP response status code, headers, and body.
