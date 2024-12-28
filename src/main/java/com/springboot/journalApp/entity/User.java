@@ -28,5 +28,6 @@ import java.util.List;
     private String password;
     @DBRef //This annotation is used to indicate that the field is a reference to another document.
     private List<JournalEntry>journalEntries=new ArrayList<>();
+    private List<String>roles;
 
 }
