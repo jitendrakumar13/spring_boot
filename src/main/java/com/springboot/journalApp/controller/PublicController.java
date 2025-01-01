@@ -20,7 +20,7 @@ public class PublicController {
             if (Checkuser!=null) { // Assuming a method exists to check if user already exists
                 return new ResponseEntity<>("User already exists", HttpStatus.CONFLICT);
             }
-            userService.saveEntry(user);
+            userService.saveNewUser(user);
             return new ResponseEntity<>(user, HttpStatus.CREATED);
         } catch (Exception e){
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);

@@ -16,16 +16,17 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user=userRepository.findByUsername(username);
-        if(user!=null){
-            UserDetails userDetails =org.springframework.security.core.userdetails.User.builder()
+        User user = userRepository.findByUsername(username);
+        if (user != null) {
+            // Return the password as is (already hashed). No need to rehash it here.
+            UserDetails userDetails = org.springframework.security.core.userdetails.User.builder()
                     .username(user.getUsername())
-                    .password(user.getPassword())
+                    .password(user.getPassword())  // The password should already be hashed here
                     .roles(user.getRoles().toArray(new String[0]))
                     .build();
             return userDetails;
         }
-        throw new UsernameNotFoundException("User not found" + username);
+        throw new UsernameNotFoundException("User not found: " + username);
     }
 }
 //explain all the codes in this file and how they work together
