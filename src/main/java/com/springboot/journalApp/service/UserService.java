@@ -28,6 +28,11 @@ public class UserService {
         user.setRoles(List.of("USER"));
         userRepository.save(user);
     }
+    public void saveAdmin(User user){
+//        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setRoles(List.of("USER","ADMIN"));
+        userRepository.save(user);
+    }
 
     public List<User> getAll(){
         return userRepository.findAll();
